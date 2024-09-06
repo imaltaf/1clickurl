@@ -286,3 +286,4 @@ function extractURLFromString(string) {
     }
     return url;
 }
+

@@ -1,0 +1,145 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Loading and completed sections */
+#loading, #completed {
+    background-color: #ffffff;
+    border: 2px solid #8a2be2;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+#loadingSpinner {
+    color: #8a2be2;
+    margin: 1rem 0;
+}
+
+#toggleOpening {
+    background-color: #8a2be2;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggleOpening:hover {
+    background-color: #7b1fa2;
+}
+
+/* Tabs to be opened section */
+#tabs-to-be-opened-container {
+    background-color: #ffffff;
+    border: 2px solid #8a2be2;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+.tabs-to-be-opened {
+    margin-top: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #8a2be2;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .main {
+        padding: 1rem;
+    }
+    
+    #loading, #completed, #tabs-to-be-opened-container {
+        max-width: 100%;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8a2be2;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7b1fa2;
+}

@@ -1,0 +1,175 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Glassmorphic container */
+#settings-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Heading styles */
+h1, h3 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Grid layout */
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Form control styles */
+.form-control, .input-group-text {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+    background-color: #9b4deb;
+    border-color: #9b4deb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+    color: #ffffff;
+}
+
+.breadcrumb-item a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff;
+}
+
+/* Toast styles */
+.toast {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.toast-header {
+    background: rgba(138, 43, 226, 0.3);
+    color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(138, 43, 226, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 43, 226, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .card-deck {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .card-deck {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .card-deck {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adjustments for smaller containers */
+p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+#saveSettings {
+    margin-top: 20px;
+}

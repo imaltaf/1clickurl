@@ -20,3 +20,20 @@ function resetFields() {
     
     document.getElementById('list').value = ''; // Clear the textarea
 }
+
+
+document.getElementById('darkModeToggle').addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+    // Optionally save the user's preference
+    localStorage.setItem('darkMode', this.checked);
+});
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('darkModeToggle').checked = true;
+}
+
+
+
+

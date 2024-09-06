@@ -144,3 +144,11 @@ header {
     max-width: 70%;
 
 }
+
+.option-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
